@@ -38,14 +38,6 @@ else {
    scanf("%d", &tranx);
 }
 
-// scanf("%lf", &h);
-
-// printf("Ente r: ");
-// scanf("%lf", &r);
-
-// v = r * h;
-// printf("\nThe volume: %lf", v);
-
    return 0;
    
 };
