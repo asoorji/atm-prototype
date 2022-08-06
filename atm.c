@@ -20,7 +20,7 @@ int new_balance;
 char text[100];
 char contd;
 
-printf("\nImportant note!!!\nTHIS IS ORJI-IFE ATM ALGORITHM\nWe will give you free 5000 Dollars to make transactions\nThank you for testing our code\nif you encounter any glitch or downtime, kindly make use of ctrt + C\n(work is still in progress)\n");
+printf("\nImportant note!!!\nTHIS IS ORJI-IFE ATM ALGORITHM\nWe will give you free 5000 Dollars to make transactions\nThank you for testing our code\nif you encounter any glitch or downtime, kindly make use of ctrl + C\n(work is still in progress)\n");
 
 printf("\nRegister your name here : ");
 fgets(name, 150, stdin);
@@ -50,6 +50,12 @@ printf("\nWelcome %s.\nYour pin is %d.\n", name, pin);
    if(tranx == 1){
    printf("\nHow much do you want to withdraw?: ");
    scanf("%d", &debit);
+
+   while ((debit > balance))
+   {
+   printf("\nThe amount you want to withdraw is more than what is in your account\nYour available balance is %0.0lf\nWithdraw within the amount range above: ", balance);
+   scanf("%d", &debit);
+   }
    
    printf("\nEnter Pin: ");
    scanf("%d", &tranxpin);
@@ -108,7 +114,11 @@ printf("\nWelcome %s.\nYour pin is %d.\n", name, pin);
    if(tranx == 1){
    printf("\nHow much do you want to withdraw?: ");
    scanf("%d", &debit);
-  
+   while ((debit > new_balance))
+   {
+   printf("\nThe amount you want to withdraw is more than what is in your account\nYour available balance is %d\nWithdraw within the amount range above: ", new_balance);
+   scanf("%d", &debit);
+   }
    printf("\nEnter Pin: ");
    scanf("%d", &tranxpin);
    if(tranxpin ==  pin){
@@ -160,3 +170,5 @@ printf("\nWelcome %s.\nYour pin is %d.\n", name, pin);
    return 0;
    
 };
+
+//I LOVE C
